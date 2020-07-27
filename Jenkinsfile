@@ -1,8 +1,12 @@
+npm install
+npm run build:ssr
+pm2 restart all
+
 pipeline {
 	agent any
 	tools {
         maven 'maven-3.6.3' 
-    }
+            }
 	stages {
 		
 		stage('Checkout Source') {
@@ -21,13 +25,13 @@ pipeline {
 		stage('lnit') {
 			steps {	
 				echo 'init Stage start :'	
-                sh 'npm run lint'
+                bat "npm run lint"
 				}
 			}
 		stage('Build') {
 			steps {	
 				echo 'Build Stage start :'	
-                sh 'npm run build'
+                bat "npm run build"
 				}
 			}
 		}
