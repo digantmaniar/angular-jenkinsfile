@@ -21,7 +21,7 @@ pipeline {
 		stage('lnit') {
 			steps {	
 				echo 'init Stage start :'	
-                bat "ng lint"
+                //bat "ng lint"
 				}
 			}
 		stage('Build') {
