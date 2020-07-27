@@ -1,7 +1,3 @@
-npm install
-npm run build:ssr
-pm2 restart all
-
 pipeline {
 	agent any
 	tools {
